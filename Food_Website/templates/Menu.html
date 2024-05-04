@@ -1,0 +1,194 @@
+{% extends 'Navigationbar.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Menu</title>
+    <style>
+        li {
+            padding-left: 20px;
+        }
+
+        a#active {
+            color: #ffffff8c;
+        }
+        nav #menu{
+            color: #fff;
+        }
+
+        html {
+            overflow-x: hidden;
+            
+        }
+
+        .aboutusheader {
+            border: 2px solid;
+            height: 34vh;
+            text-align: center;
+            background-image: url("{% static 'app/images/sushi1920.jpg' %}");
+            width: auto;
+            /* background-repeat: no-repeat; */
+        }
+
+        .aboutusheaderinside {
+            margin: auto;
+            font-size: 3rem;
+            color: whitesmoke;
+            font-family: yashu;
+
+        }
+
+        @font-face {
+            font-family: yashu;
+            src: url(DancingScript-VariableFont_wght.ttf);
+        }
+        @media only screen and (max-width:465px) {
+            #menu{
+                width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+   
+
+
+    <div class="row aboutusheader">
+        <div class="col aboutusheaderinside "><strong>Menu</strong> </div>
+    </div>
+
+    <br><br>
+
+    <div class="row">
+        <div class="col-sm-6 " style="text-align: center;">
+            <a href="/Burgermenu/">
+                <img src="{% static 'app/images/burgerMenu.jpeg' %}" alt="BurgerMenu" id="menu" width="70%">
+            </a>
+        </div>
+        <div class="col-sm-6 " style="text-align: center;">
+            <a href="/sushimenu/">
+                <img src="{% static 'app/images/sushimenu.jpeg' %}" alt="sushumenu" id="menu" width="70%">
+            </a>
+        </div>
+    </div>
+
+    <br>
+    <div class="row">
+        <div class="col-sm-6 " style="text-align: center;">
+            <a href="/Pizzamenu/">
+                <img src="{% static 'app/images/pizzamenu.jpeg' %}" alt="pizzamenu" id="menu" width="70%">
+            </a>
+        </div>
+        <div class="col-sm-6 " style="text-align: center;">
+            <a href="/Sandwichmenu/">
+                <img src="{% static 'app/images/sandwiches.menu.jpeg' %}" alt="sandwiches" id="menu" width="70%">
+            </a>
+        </div>
+    </div>
+
+    <br>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"><i class="fa fa-facebook"
+                    aria-hidden="true"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den-in" role="button"><i class="fa fa-twitter"
+                    aria-hidden="true"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.co.in/maps" role="button"><i class="fa fa-map-marker"
+                    aria-hidden="true"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.co.in/maps" role="button"><i class="fa fa-map-marker"
+                    aria-hidden="true"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://in.linkedin.com/" role="button"><i class="fa fa-linkedin"
+                    aria-hidden="true"></i></a>
+
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up </strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example21" class="form-control" />
+                                <label class="form-label" for="form5Example21">Email address</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                    eum harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+            </section>
+            <!-- Section: Text -->
+
+
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                Food Delivery © 2023
+                <a class="text-white" href="#">Privacy Policy</a>
+            </div>
+            <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+</body>
+
+</html>
+
+{% endblock content %}

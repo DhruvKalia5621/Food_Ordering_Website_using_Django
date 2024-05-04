@@ -1,0 +1,373 @@
+{% extends 'Navigationbar.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About Us</title>
+    <!-- <script src="{% static 'app/images/sushicart1.js' %}"></script> -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding-left: 20px;
+        }
+
+        .aboutusheader {
+            border: 2px solid;
+            height: 34vh;
+            text-align: center;
+            background-image: url("{% static 'app/images/sushi1920.jpg' %}");
+            width: auto;
+            /* background-repeat: no-repeat; */
+        }
+
+        .aboutusheaderinside {
+            margin: auto;
+            font-size: 3rem;
+            color: whitesmoke;
+            font-family: yashu;
+
+        }
+
+        .c1 {
+            /* border: 1px solid; */
+            text-align: center;
+            padding-top: 3%;
+            height: auto;
+            background-color: whitesmoke;
+        }
+
+        .c2 {
+            /* border: 4px solid red; */
+            text-align: center;
+
+        }
+
+        a#active {
+            color: white;
+        }
+
+        .teamMember1 {
+            width: 23%;
+            border: none;
+        }
+
+        .fa {
+            color: grey;
+
+
+        }
+
+
+        .fa:hover {
+            border-color: orangered;
+            color: orangered;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        .faclass {
+            display: none;
+
+        }
+
+        .teamcards:hover .faclass {
+
+            display: block;
+
+        }
+        @font-face {
+            font-family: yashu;
+            src: url(DancingScript-VariableFont_wght.ttf);
+        }
+        nav #about{
+            color: #fff;
+        }
+        nav #active{
+            color: #ffffff8c;
+        }
+    </style>
+     
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="cart">
+          <h2>Cart</h2>
+          <ul id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+          </ul>
+          <div class="payment-section">
+            <p>Total: $<span id="total-payment">0</span></p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    <!-- header -->
+
+    <div class="row aboutusheader">
+        <div class="col aboutusheaderinside "><strong>About Us</strong> </div>
+    </div>
+
+    <!-- section  -->
+
+    <div class="row section">
+        <div class="col-sm-6 c1 ">
+            <img src="{% static 'app/images/delivery.jpeg' %}" class="img-fluid" width="400px" alt="">
+        </div>
+        <div class="col-sm-6 c2 ">
+            <h2 style="padding: 7%;">A Few Words About Food Delivery</h2>
+            <p style="color:grey;font-size: 18px;">Food Delivery,one of today's most renowned food delivery services,was
+                established in
+                2013,
+                as a quick and secure method to order something for anyone with any taste -from burger lovers
+                to fans of sushi and seafood.
+            </p>
+            <br>
+            <div style="display: flex;justify-content: center;">
+                <div style="padding:5%">
+                    <h2 style="color: orange;font-size: 40px;"><strong>20</strong></h2>
+                    <label for="">ORDERS MADE</label>
+                </div>
+                <br>
+                <div style="padding:5%">
+                    <h2 style="color: orange;font-size: 40px;"><strong>1300</strong></h2>
+                    <label for="">PIZZAS DELIVERED</label>
+                </div>
+
+                <br>
+                <div style="padding:5%">
+                    <h2 style="color: orange;font-size: 40px;"><strong>564</strong></h2>
+                    <label for="">CLIENTS EVERYDAY</label>
+                </div>
+
+            </div>
+            <br>
+            <a href="/Menu/"
+                style="text-decoration: none;border: 1px solid;padding: 13px;border-radius: 20px;background-color: orange;color: white;">SEE
+                OUR MENU</a>
+        </div>
+    </div>
+    <br>
+    <div class="team" style="text-align: center;">
+        <p class="ourteam" style="font-size: 30px;">
+            <strong>Meet Our Team</strong>
+
+        </p>
+        <p style="text-align: center;color: grey;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore animi ad error incidunt voluptas! <br>
+            Aperiam, modi, quasi repellat esse ut nostrum similique obcaecati optio minima molestiae ratione, tempore
+            alias.
+        </p>
+        <hr>
+    </div>
+    <div>
+        <div class="row" style="height: auto">
+            <div class="col-sm-4" ">
+            <div class=" card " style=" width:300px; text-align: center;margin: auto;">
+                <a href="#">
+                    <img class="card-img-top" src="{% static 'app/images/girl.jpg' %}" alt="Card image">
+                </a>
+
+                <div class="card-img-overlay teamcards " style="margin-top:53%;">
+                    <h4 class="card-title">Amanda Stark</h4>
+                    <p class="card-text">CEO "Food Delivery"</p>
+                    <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+                    <div class="faclass">
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"><i
+                                class="fa fa-facebook" aria-hidden="true"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den-in" role="button"><i
+                                class="fa fa-twitter" aria-hidden="true"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button"><i
+                                class="fa fa-instagram" aria-hidden="true"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://in.linkedin.com/" role="button"><i
+                                class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class=" card " style=" width:300px; text-align: center;margin: auto;">
+                <a href="#">
+                    <img class="card-img-top" src="{% static 'app/images/mana.jpg' %}" alt="Card image">
+                </a>
+
+                <div class="card-img-overlay teamcards" style="margin-top:53%;">
+                    <h4 class="card-title">Edward Robinson</h4>
+                    <p class="card-text">Head Manager</p>
+                    <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+                    <div class="faclass">
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"><i
+                                class="fa fa-facebook" aria-hidden="true"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den-in" role="button"><i
+                                class="fa fa-twitter" aria-hidden="true"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button"><i
+                                class="fa fa-instagram" aria-hidden="true"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://in.linkedin.com/" role="button"><i
+                                class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class=" card " style=" width:300px; text-align: center;margin: auto;">
+                <a href="#">
+                    <img class="card-img-top" src="{% static 'app/images/marketing.jpg' %}" alt="Card image">
+                </a>
+
+                <div class="card-img-overlay teamcards" style="margin-top:53%;">
+                    <h4 class="card-title">Rebecca Ives</h4>
+                    <p class="card-text">Marketing Expert</p>
+                    <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+                    <div class="faclass">
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"><i
+                                class="fa fa-facebook" aria-hidden="true"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den-in" role="button"><i
+                                class="fa fa-twitter" aria-hidden="true"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button"><i
+                                class="fa fa-instagram" aria-hidden="true"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://in.linkedin.com/" role="button"><i
+                                class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <br>
+   
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"><i class="fa fa-facebook"
+                    aria-hidden="true"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den-in" role="button"><i class="fa fa-twitter"
+                    aria-hidden="true"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.co.in/maps" role="button"><i class="fa fa-map-marker"
+                    aria-hidden="true"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button"><i class="fa fa-instagram"
+                    aria-hidden="true"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://in.linkedin.com/" role="button"><i class="fa fa-linkedin"
+                    aria-hidden="true"></i></a>
+
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up </strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example21" class="form-control" />
+                                <label class="form-label" for="form5Example21">Email address</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                    eum harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+            </section>
+            <!-- Section: Text -->
+
+
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                Food Delivery © 2023
+                <a class="text-white" href="#">Privacy Policy</a>
+            </div>
+            <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+{% endblock content %}

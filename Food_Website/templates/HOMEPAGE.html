@@ -1,0 +1,430 @@
+{% extends 'Navigationbar.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="bootstrapwebsite.css"> -->
+  <!-- <link rel="stylesheet" href="loginstyle.css"> -->
+  <style>
+    body {
+      background-color: black;
+    }
+
+    li {
+      padding-left: 20px;
+    }
+
+    #button1 {
+      width: 100px;
+    }
+
+    .para {
+      position: absolute;
+      color: whitesmoke;
+      font-size: 60px;
+      font-family: yashu;
+      right: 10%;
+      top: 20%;
+    }
+
+    #imagebutton {
+      position: absolute;
+      right: 23%;
+      top: 40%;
+      padding: 10px;
+      border-radius: 15px;
+      font-family: yashu;
+      font-size: 20px;
+      background: transparent;
+    }
+
+    #imagebutton:hover {
+      background-color: black;
+      color: white;
+    }
+
+    @font-face {
+      font-family: yashu;
+      src: url(DancingScript-VariableFont_wght.ttf);
+    }
+
+    .Menu {
+      /* border: 2px solid blue; */
+      width: 100%;
+      height: auto;
+      background-color: orange;
+    }
+
+    .menu {
+      /* border: 1px solid black; */
+      text-align: center;
+      padding-top: 20px;
+      font-size: 30px;
+      font-family: yashu;
+      background-color: orange;
+    }
+
+
+    .card1 {
+      /* border: 1px solid blue; */
+      width: 53%;
+      border: none;
+      background-color: orange;
+      font-family: yashu;
+      font-size: 30px;
+      text-align: center;
+      margin: auto;
+      transition: width 2s, height 4s;
+    }
+
+    .card1:hover {
+      width: 55%;
+    }
+
+    .card1:hover .card-footer {
+      background-color: whitesmoke;
+      color: black;
+    }
+
+    a#active {
+      color: white;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    .loginbutton {
+      width: 110px;
+      margin-right: 20px;
+    }
+   
+ 
+
+
+
+
+    @media only screen and (max-width:611px) {
+      /* .carouselimage {
+        height: 400px;
+
+      } */
+
+      .para {
+        font-size: 20px;
+      }
+
+      #imagebutton {
+        font-size: 10px;
+        top: 55%;
+      }
+
+      #button1 {
+        /* border: 2px solid blue; */
+        /* height: auto; */
+        width: 10%;
+      }
+
+
+
+
+    }
+  </style>
+
+  {% block title %}<title>Home</title>{% endblock %}
+</head>
+
+<body>
+
+  
+
+
+
+
+
+
+
+
+
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" style="z-index: 0;">
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+
+        <a href="/sushimenu/">
+          <img src="{% static 'app/images/sushi1920.jpg' %}" class="d-block w-100" alt="...">
+        </a>
+
+
+      </div>
+      <div class="carousel-item">
+        <a href="/Pizzamenu/">
+          <img src="{% static 'app/images/pizza1920.jpg' %}" class="d-block w-100" alt="...">
+        </a>
+
+      </div>
+      <div class="carousel-item">
+        <a href="/Burgermenu/">
+          <img src="{% static 'app/images/burger1920.jpg' %}" class="d-block w-100" alt="...">
+        </a>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="Menu">
+
+    <div class="menu">
+      <p class="foodmenu">
+        Our Menu
+      </p>
+      <hr>
+    </div>
+
+    <!-- first row->>> -->
+
+
+    <div class="row">
+
+      <!-- left side div -->
+
+      <div class="col-sm-6 sushi">
+        <div class="card card1">
+          <a href="/sushimenu/" style="text-decoration: none;color: black;">
+            <div class="card-body sushiimage"><img src="{% static 'app/images/sushi640.jpg' %}" width="100%" alt=""
+                style="border-radius: 15px;"></div>
+            <div class="card-footer" style="border-radius: 15px;">Sushi</div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- right side div -->
+
+      <div class="col-sm-6 burger">
+        <div class="card card1">
+          <a href="/Burgermenu/" style="text-decoration: none;color: black;">
+            <div class="card-body"><img src="https://images3.alphacoders.com/922/thumb-1920-922680.jpg" width="100%"
+                alt="" style="border-radius: 15px;"></div>
+            <div class="card-footer" style="border-radius: 15px;">Burgers</div>
+          </a>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <br>
+
+    <!-- second row->> -->
+    <div class="row">
+
+      <!-- left side div -->
+
+      <div class="col-sm-6 sushi">
+        <div class="card card1">
+          <a href="/Pizzamenu/" style="text-decoration: none;color: black;">
+            <div class="card-body sushiimage"><img src="{% static 'app/images/pizza640.jpg' %}" width="100%" alt=""
+                style="border-radius: 15px;"></div>
+            <div class="card-footer" style="border-radius: 15px;">Pizza</div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- right side div -->
+
+      <div class="col-sm-6 burger">
+        <div class="card card1">
+          <a href="/Pizzamenu/" style="text-decoration: none;color: black;">
+            <div class="card-body"><img src="{% static 'app/images/noodles640.jpg' %}" width="100%" alt=""
+                style="border-radius: 15px;"></div>
+            <div class="card-footer" style="border-radius: 15px;">Noodles</div>
+          </a>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <br>
+
+    <!-- third row->>> -->
+
+
+    <div class="row">
+
+      <!-- left side div -->
+
+      <div class="col-sm-6 sushi">
+        <div class="card card1">
+          <a href="/Pizzamenu/" style="text-decoration: none;color: black;">
+            <div class="card-body sushiimage"><img src="{% static 'app/images/cake640.jpg' %}" width="100%" alt=""
+                style="border-radius: 15px;"></div>
+            <div class="card-footer" style="border-radius: 15px;">Sweets</div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- right side div -->
+
+      <div class="col-sm-6 burger">
+        <div class="card card1">
+          <a href="/Pizzamenu/" style="text-decoration: none;color: black;">
+            <div class="card-body"><img src="{% static 'app/images/barbecue640.jpg' %}" width="100%" alt=""
+                style="border-radius: 15px;"></div>
+            <div class="card-footer" style="border-radius: 15px;">Non-Veg</div>
+          </a>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"><i
+            class="fa fa-facebook" aria-hidden="true"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1"
+          href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den-in" role="button"><i
+            class="fa fa-twitter" aria-hidden="true"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.co.in/maps" role="button"><i
+            class="fa fa-map-marker" aria-hidden="true"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button"><i
+            class="fa fa-instagram" aria-hidden="true"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://in.linkedin.com/" role="button"><i
+            class="fa fa-linkedin" aria-hidden="true"></i></a>
+
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up </strong>
+              </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+      </section>
+      <!-- Section: Text -->
+
+
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        Food Delivery © 2023
+        <a class="text-white" href="#">Privacy Policy</a>
+      </div>
+      <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+{% endblock content %}

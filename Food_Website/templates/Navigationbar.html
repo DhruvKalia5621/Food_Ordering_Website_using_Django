@@ -1,0 +1,275 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Document</title>
+  <script src="{% static 'app/images/sushicart3.js' %}"></script>
+</head>
+<style>
+  li {
+    padding-left: 20px;
+   
+  }
+
+  .loginbutton {
+    width: 110px;
+    margin-right: 20px;
+  }
+  #sidebar{
+    background: none;
+    border: none;
+    padding-right: 25px;
+  }
+  .fa-shopping-cart{
+    color: gray;
+   
+  }
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  /* left: 0; */
+  /* bottom: 0; */
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenav {
+  right: 0;
+}
+#cart-items li{
+  list-style-type: circle;
+  /* border: 1px solid red; */
+  padding:20px;
+}
+.item-details{
+  border: 0px solid red;
+  /* width: auto; */
+  color: gray;
+  /* display: flex; */
+  flex-direction: column;
+}
+.item-details h4{
+  border: 2px solid aqua;
+}
+ /* Define styles for the scrollbar track */
+ ::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+  }
+
+  /* Define styles for the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+  }
+
+  /* Define styles for the scrollbar track when hovered */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the thumb on hover */
+  }
+@font-face {
+      font-family: yashu;
+      src: url(DancingScript-VariableFont_wght.ttf);
+    }
+
+.quantity-controls button{
+  border-radius: 50px;
+  width: 40px;
+  background-color: black;
+  color: #555;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="cart text-center">
+      <!-- <h2 style="color: gray;">Cart</h2>
+      <br>
+      <hr style="color: gray;">
+      <ul id="cart-items">
+        
+        <!-- Cart items will be dynamically added here -->
+      <!-- </ul>
+      <br>
+      <div class="payment-section">
+        <p style="color: gray;">Total: $<span id="total-payment">0</span></p>
+        <a class="btn btn-dark" href="#">Pay now >></a> -->
+      <!-- </div>  -->
+      
+      <div class="cart">
+        <h2  style="color: gray;font-family: yashu;">CART</h2>
+        <button type="button" class="btn btn-dark btn-rounded" style="margin-right:70%;" onclick="clearCart()">Clear Cart</button>
+        <ul id="cart-items">
+          <!-- Cart items will be dynamically added here -->
+        </ul>
+        <div class="payment-section">
+
+          <p style="color: gray;">Total: $<span id="total-payment">0</span></p>
+        </div>
+        <a class="btn btn-dark" href="#">Pay now >></a>
+        
+      </div>
+      
+     
+      
+    </div>
+  </div>
+
+ 
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-center">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)">
+        <img
+          src="https://th.bing.com/th?id=OIP.s3x79zW0bKRaTfItjRj9KgHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+          alt="" style="width:50px;" class="rounded-pill">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item ">
+            <a class="nav-link" id="active" href='/'>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="about" href="/aboutus/">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="menu" href="/Menu/">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact" href="/Contact/">Contacts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact" href="/userprofile/">Welcome {{ user.username }} </a>
+          </li>
+
+        </ul>
+        <li class="nav-item">
+          <button id="sidebar" onclick="openNav()"><i class="fa fa-shopping-cart" style="font-size: 23px;" aria-hidden="true"></i></button>
+        </li>
+
+        <form class="d-flex justify-content-center">
+          <!-- Example single danger button -->
+          <div class="btn-group">
+            <button type="button" onclick="/Loginform/" class="btn btn-primary dropdown-toggle loginbutton"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Login
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/Loginform/">Login</a></li>
+              <li><a class="dropdown-item" href="/logout/">Logout</a></li>
+
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <a data-bs-toggle="dropdown" aria-expanded="false">
+              <input class="form-control me-2" id="myinput2" type="text" placeholder="Search" onkeyup="homesearch()" autocomplete="off">
+            </a>
+
+            <ul class="dropdown-menu" style="width: 13em;" aria-labelledby="dropdownMenuLink">
+
+              <li><a class="dropdown-item" href="/Pizzamenu/">Pizza</a></li>
+              <li><a class="dropdown-item" href="/sushimenu/">Sushi</a></li>
+              <li><a class="dropdown-item" href="/Burgermenu/">Burger</a></li>
+              <li><a class="dropdown-item" href="/Sandwichmenu/">Sandwiches</a></li>
+
+            </ul>
+          </div>
+
+
+          <!-- <button class="btn btn-primary" type="button">Search</button> -->
+        </form>
+        
+      </div>
+    </div>
+  </nav>
+
+</body>
+
+</html>
+
+
+<script>
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "430px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+  // const homesearch = () => {
+  //   let filter = document.getElementById('myinput2').value.toUpperCase();
+
+  //   let div = document.getElementsByClassName('d-flex');
+  //   let drop = div.getElementsByClassName('dropdown');
+  //   let ul = drop.getElementsByTagName('ul');
+  //   let li = ul.getElementsByTagName('li');
+
+
+
+
+  //   for (var i = 0; i < li.length; i++) {
+  //     let a = li[i].getElementsByTagName('a')[0];
+  //     let textValue = a.textContent || a.innerText;
+  //     if (textValue.toUpperCase().indexOf(filter) > -1) {
+  //       li[i].style.display = '';
+
+  //       // li[i].style.display = "block";
+
+  //     }
+
+  //     else {
+  //       li[i].style.display = 'none';
+  //     }
+
+  //   }
+
+  // }
+
+
+
+</script>
+
+{% block content %}{% endblock content %}

@@ -1,0 +1,886 @@
+{% extends 'Navigationbar.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Burgers</title>
+  <style>
+    li {
+      padding-left: 20px;
+    }
+
+    .fa {
+      font-size: 25px;
+    }
+
+    .aboutusheader {
+      border: 2px solid;
+      height: 34vh;
+      text-align: center;
+      background-image: url("{% static 'app/images/sushi1920.jpg' %}");
+      width: auto;
+      /* background-repeat: no-repeat; */
+    }
+
+    .aboutusheaderinside {
+      margin: auto;
+      /* font-size: 3rem; */
+      color: whitesmoke;
+      font-family: yashu;
+
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    @font-face {
+      font-family: yashu;
+      src: url(DancingScript-VariableFont_wght.ttf);
+    }
+
+    .fa-star {
+      font-size: 14px;
+    }
+
+    .card-header:hover {
+      border: 2px solid aqua;
+      border-radius: 15px;
+    }
+
+    #mobilesizefoodsection {
+      display: none;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+    nav #active{
+            color: #ffffff8c;
+        }
+
+
+
+    @media only screen and (max-width:426px) {
+      #mobilesizefoodsection {
+        display: block;
+      }
+
+      .laptopsizesection {
+        display: none;
+      }
+
+    }
+
+    @media only screen and (max-width:1024px) {
+      p {
+        font-size: 25px;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="row aboutusheader">
+    <div class="col aboutusheaderinside ">
+      <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+      <input type="text" id="myinput" placeholder=" Enter the type of burger you want.."
+        style="width:50%;padding: 10px;border-radius: 10px;border-color:wheat;" onkeyup="searchengine()">
+    </div>
+  </div>
+  <br><br>
+
+
+
+  <!-- MEDIA QUERY SECTION STARTS -->
+
+
+  <div class="container-fluid " id="mobilesizefoodsection" ">
+    <div class=" row ">
+
+      <!-- SUSHI TYPE 1 -->
+
+
+      <div class=" col-sm-3 p-3 inputsearch" id="head" style="border: 0px solid;">
+
+    <div class="card ">
+      <div class="card-header">
+        <a href="#">
+          <img src="https://b.zmtcdn.com/data/dish_photos/c15/c55b6dc71813034a5da18f1f62276c15.jpg?output-format=webp"
+            alt="" width="100%" style="border-radius: 10px;">
+        </a>
+
+      </div>
+      <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+        <p style="width: 50%;">Burger27</p>
+        <a href="#"
+          style="font-family: yashu;font-size:20px;height: 40px; margin-left: 27%;border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+          3.7 <i class="fa fa-star" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$250 for one</div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- SUSHI TYPE 2 -->
+
+  <div class="col-sm-3 p-3 inputsearch" id="head">
+    <div class="card " style="border: 0px;">
+      <div class="card-header">
+        <a href="#">
+          <img src="https://b.zmtcdn.com/data/dish_photos/842/483feb6c2c17f8258e39a4f90f617842.jpg?output-format=webp"
+            alt="" width="100%" style="border-radius: 10px;">
+        </a>
+
+      </div>
+      <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+        <p style="width: 50%;">Laziz Pizza</p>
+        <a href="#"
+          style="font-family: yashu;font-size:20px;;height: 40px; margin-left: 27%;border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+          3.9 <i class="fa fa-star" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$280 for one</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SUSHI TYPE 3 -->
+
+
+
+  <div class="col-sm-3 p-3 inputsearch " id="head">
+    <div class="card " style="border: 0px;">
+      <div class="card-header">
+        <a href="#">
+          <img src="https://b.zmtcdn.com/data/dish_photos/f26/c0c134fa924ff54d744b4a80139f0f26.jpg?output-format=webp"
+            alt="" width="100%" style="border-radius: 10px;">
+        </a>
+
+      </div>
+      <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+        <p style="width: 70%;">KFC</p>
+        <a href="#"
+          style="font-family: yashu;font-size:20px;;height: 40px; margin-left: 10%;border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+          4.1 <i class="fa fa-star" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$150 for one</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- SUSHI TYPE 4 -->
+
+
+
+  <div class="col-sm-3 p-3 inputsearch" id="head">
+    <div class="card " style="border: 0px;">
+      <div class="card-header">
+        <a href="#">
+          <img src="https://b.zmtcdn.com/data/dish_photos/310/0ef2defb9f22d019fe31acffd99d7310.jpg?output-format=webp"
+            alt="" width="100%" style="border-radius: 10px;">
+        </a>
+
+      </div>
+      <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+        <p style="width: 70%;">king</p>
+        <a href="#"
+          style="font-family: yashu;font-size:20px;height: 40px; margin-left: 5%; border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+          3.4 <i class="fa fa-star" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$70 for one</div>
+    </div>
+  </div>
+
+  </div>
+
+
+  </div>
+
+
+
+  <!-- SECOND ROW START  -->
+
+
+  <div class="container-fluid inputsearch " id="mobilesizefoodsection">
+    <div class="row">
+      <div class="col-sm-3 p-3 " id="head">
+
+        <!-- SUSHI TYPE 5 -->
+
+        <div class="card" style="border: 0px;">
+          <div class="card-header">
+            <a href="#">
+              <img
+                src="https://b.zmtcdn.com/data/dish_photos/78e/e87af8e4edbc6f4499914a3e24ea878e.jpg?output-format=webp"
+                alt="" width="100%" style="border-radius: 10px;">
+            </a>
+
+          </div>
+          <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+            <p style="width: 70%;">Chessy</p>
+            <a href="#"
+              style="font-family: yashu;font-size:20px;height: 40px; margin-left: 5%; border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+              4.2 <i class="fa fa-star" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$130 for one</div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+      <!-- SUSHI TYPE 6 -->
+
+
+
+      <div class="col-sm-3 p-3 inputsearch " id="head">
+        <div class="card " style="border: 0px;">
+          <div class="card-header">
+            <a href="#">
+              <img
+                src=" https://b.zmtcdn.com/data/dish_photos/df3/1e17b6d0569265f0a877dfbe54f56df3.jpg"
+                alt="" width="100%" style="border-radius: 10px;">
+            </a>
+
+          </div>
+          <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+            <p style="width: 70%;">vegloaded</p>
+            <a href="#"
+              style="font-family: yashu;font-size:20px;height: 40px; margin-left: 5%; border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+              3.7 <i class="fa fa-star" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$50 for one</div>
+        </div>
+      </div>
+
+
+
+
+      <!-- SUSHI TYPE 7 -->
+
+
+      <div class="col-sm-3  p-3 inputsearch" id="head">
+        <div class="card " style="border: 0px;">
+          <div class="card-header">
+            <a href="#">
+              <img
+                src="https://b.zmtcdn.com/data/dish_photos/4b6/95bf12441eec53365d52e08602d9f4b6.jpg"
+                alt="" width="100%" style="border-radius: 10px;">
+            </a>
+
+          </div>
+          <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+            <p style="width: 70%;">Tandoori</p>
+            <a href="#"
+              style="font-family: yashu;font-size:20px;height: 40px; margin-left: 5%; border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+              4.3 <i class="fa fa-star" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$280 for one</div>
+        </div>
+      </div>
+
+
+
+      <!-- SUSHI TYPE 8 -->
+
+
+
+      <div class="col-sm-3 p-3 inputsearch" id="head">
+        <div class="card " style="border: 0px;">
+          <div class="card-header">
+            <a href="#">
+              <img
+                src="https://b.zmtcdn.com/data/dish_photos/991/3549a00513118d733e080e1c7a7a0991.jpg"
+                alt="" width="100%" style="border-radius: 10px;">
+            </a>
+
+          </div>
+          <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+            <p style="width: 70%;">BigBun</p>
+            <a href="#"
+              style="font-family: yashu;font-size:20px;height: 40px; margin-left: 5%; border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+              4.5 <i class="fa fa-star" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$100 for one</div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+
+  <!-- MEDIA QUERY SECTION ENDS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+  https://b.zmtcdn.com/data/dish_photos/c15/c55b6dc71813034a5da18f1f62276c15.jpg?output-format=webp
+  https://b.zmtcdn.com/data/dish_photos/842/483feb6c2c17f8258e39a4f90f617842.jpg?output-format=webp
+  https://b.zmtcdn.com/data/dish_photos/f26/c0c134fa924ff54d744b4a80139f0f26.jpg?output-format=webp
+  https://b.zmtcdn.com/data/dish_photos/310/0ef2defb9f22d019fe31acffd99d7310.jpg?output-format=webp
+  https://b.zmtcdn.com/data/dish_photos/78e/e87af8e4edbc6f4499914a3e24ea878e.jpg?output-format=webp
+  https://b.zmtcdn.com/data/dish_photos/df3/1e17b6d0569265f0a877dfbe54f56df3.jpg
+  https://b.zmtcdn.com/data/dish_photos/4b6/95bf12441eec53365d52e08602d9f4b6.jpg
+  https://b.zmtcdn.com/data/dish_photos/991/3549a00513118d733e080e1c7a7a0991.jpg -->
+  <!-- FOODSECTION START -->
+
+  <!-- SECTION 1 START -->
+
+
+
+
+  <div class="container-fluid laptopsizesection" style="border: 0px solid;">
+    <div class="row" id="row">
+
+
+
+
+      <!-- SUSHI TYPE 1 -->
+
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 p-3 ">
+
+
+
+        <div class=" sushitypes" style="border: 0px solid;width: 100%;">
+
+          <!-- <div class="col-lg  p-3" id="head"> -->
+          <div class="card ">
+            <div class="card-header">
+              <a href="#"  onclick="addToCart(18)">
+                <img
+                  src="https://b.zmtcdn.com/data/dish_photos/c15/c55b6dc71813034a5da18f1f62276c15.jpg?output-format=webp"
+                  alt="" width="100%" style="border-radius: 10px;">
+              </a>
+
+            </div>
+            <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+              <p style="width: 50%;">Burger27</p>
+              <a href="#" id="card-body-a-tag"
+                style="font-family: yashu;font-size:20px;;height: 40px; margin-left: 30%;border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+                4.2 <i class="fa fa-star" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$250 for one</div>
+          </div>
+          <!-- </div> -->
+
+        </div>
+
+      </div>
+
+
+
+      <!-- SUSHI TYPE 2 -->
+
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 p-3">
+
+        <div class=" sushitypes" style="border: 0px solid;width: 100%;">
+
+          <!-- <div class="col-lg  p-3" id="head"> -->
+          <div class="card " style="border: 0px;">
+            <div class="card-header">
+              <a href="#"  onclick="addToCart(19)">
+                <img
+                  src="https://b.zmtcdn.com/data/dish_photos/842/483feb6c2c17f8258e39a4f90f617842.jpg?output-format=webp"
+                  alt="" width="100%" style="border-radius: 10px;">
+              </a>
+
+            </div>
+            <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+              <p style="width: 50%;">Laziz Pizza</p>
+              <a href="#"
+                style="font-family: yashu;font-size:20px;;height: 40px; margin-left: 30%;border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+                3.9 <i class="fa fa-star" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$280 for one</div>
+          </div>
+          <!-- </div> -->
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- SUSHI TYPE 3 -->
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 p-3">
+
+        <div class=" sushitypes" style="border: 0px solid;width: 100%;">
+
+          <!-- <div class="col-lg p-3" id="head"> -->
+          <div class="card " style="border: 0px;">
+            <div class="card-header">
+              <a href="#"  onclick="addToCart(20)">
+                <img
+                  src="https://b.zmtcdn.com/data/dish_photos/f26/c0c134fa924ff54d744b4a80139f0f26.jpg?output-format=webp"
+                  alt="" width="100%" style="border-radius: 10px;">
+              </a>
+
+            </div>
+            <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+              <p style="width: 50%;">KFC</p>
+              <a href="#"
+                style="font-family: yashu;font-size:20px;;height: 40px; margin-left: 30%;border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+                4.1 <i class="fa fa-star" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$150 for one</div>
+          </div>
+          <!-- </div> -->
+
+        </div>
+
+      </div>
+
+
+
+
+
+      <!-- SUSHI TYPE 4 -->
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 p-3">
+
+        <div class=" sushitypes" style="border: 0px solid;width: 100%;">
+
+          <!-- <div class="col-lg p-3" id="head"> -->
+          <div class="card " style="border: 0px;">
+            <div class="card-header">
+              <a href="#"  onclick="addToCart(21)">
+                <img
+                  src="https://b.zmtcdn.com/data/dish_photos/310/0ef2defb9f22d019fe31acffd99d7310.jpg?output-format=webp"
+                  alt="" width="100%" style="border-radius: 10px;">
+              </a>
+
+            </div>
+            <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+              <p style="width: 35%;">king</p>
+              <a href="#"
+                style="font-family: yashu;font-size:20px;height: 40px; margin-left: 40%; border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+                4.3 <i class="fa fa-star" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$70 for one</div>
+          </div>
+          <!-- </div> -->
+        </div>
+
+      </div>
+
+
+      <!-- FIRST SECTION END -->
+
+
+
+      <!-- SECOND SECTION ROW START  -->
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 p-3">
+
+        <div class="sushitypes" style="border: 0px solid;width: 100%;">
+          <!-- <div class="col-lg p-3" id="head"> -->
+
+          <!-- SUSHI TYPE 5 -->
+
+          <div class="card" style="border: 0px;">
+            <div class="card-header">
+              <a href="#"  onclick="addToCart(22)">
+                <img
+                  src="https://b.zmtcdn.com/data/dish_photos/78e/e87af8e4edbc6f4499914a3e24ea878e.jpg?output-format=webp"
+                  alt="" width="100%" style="border-radius: 10px;">
+              </a>
+
+            </div>
+            <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+              <p style="width: 40%;">Chessey</p>
+              <a href="#"
+                style="font-family: yashu;font-size:20px;height: 40px; margin-left: 40%; border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+                4.2 <i class="fa fa-star" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$130 for one</div>
+          </div>
+
+
+          <!-- </div> -->
+
+        </div>
+
+      </div>
+
+
+
+
+
+      <!-- SUSHI TYPE 6 -->
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 p-3">
+
+
+
+        <div class="sushitypes" style="border: 0px solid;width: 100%;">
+
+          <!-- <div class="col-lg p-3" id="head"> -->
+          <div class="card " style="border: 0px;">
+            <div class="card-header">
+              <a href="#"  onclick="addToCart(23)">
+                <img
+                  src="https://b.zmtcdn.com/data/dish_photos/df3/1e17b6d0569265f0a877dfbe54f56df3.jpg"
+                  alt="" width="100%" style="border-radius: 10px;">
+              </a>
+
+            </div>
+            <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+              <p style="width: 35%;">vegloaded</p>
+              <a href="#"
+                style="font-family: yashu;font-size:20px;height: 40px; margin-left: 45%; border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+                4.0 <i class="fa fa-star" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$50 for one</div>
+          </div>
+          <!-- </div> -->
+
+        </div>
+
+
+      </div>
+
+
+      <!-- SUSHI TYPE 7 -->
+
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 p-3">
+
+        <div class="sushitypes" style="border: 0px solid;width: 100%;">
+
+          <!-- <div class="col-lg  p-3" id="head"> -->
+          <div class="card " style="border: 0px;">
+            <div class="card-header">
+              <a href="#"  onclick="addToCart(24)">
+                <img
+                  src="https://b.zmtcdn.com/data/dish_photos/4b6/95bf12441eec53365d52e08602d9f4b6.jpg"
+                  alt="" width="100%" style="border-radius: 10px;">
+              </a>
+
+            </div>
+            <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+              <p style="width: 70%;">Tandoori</p>
+              <a href="#"
+                style="font-family: yashu;font-size:20px;height: 40px; margin-left: 10%; border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+                4.3 <i class="fa fa-star" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$280 for one</div>
+          </div>
+          <!-- </div> -->
+
+        </div>
+
+      </div>
+
+      <!-- SUSHI TYPE 8 -->
+
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 p-3">
+
+
+
+        <div class="sushitypes" style="border: 0px solid;width: 100%;">
+
+          <!-- <div class="col-lg p-3" id="head"> -->
+          <div class="card " style="border: 0px;">
+            <div class="card-header">
+              <a href="#"  onclick="addToCart(25)">
+                <img
+                  src="https://b.zmtcdn.com/data/dish_photos/991/3549a00513118d733e080e1c7a7a0991.jpg"
+                  alt="" width="100%" style="border-radius: 10px;">
+              </a>
+
+            </div>
+            <div class="card-body" style="font-family: yashu;font-size: 2rem;display: flex;">
+              <p style="width: 50%;">BigBun</p>
+              <a href="#"
+                style="font-family: yashu;width:20% ;text-align: center; font-size:20px;height: 40px; margin-left: 25%; border: 1px solid;padding: 5px;border-radius: 10px;background-color: green;color: white;opacity: 0.5;text-decoration: none;">
+                4.5 <i class="fa fa-star" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="card-footer" style="font-family: yashu;font-size: 1rem;">$100 for one</div>
+          </div>
+          <!-- </div> -->
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <!-- SECOND SECTION ENDS -->
+
+
+  <!-- FOODSECTION ENDS -->
+
+
+
+
+
+  <!-- ON CLICK SHOW MENU -->
+
+
+
+
+
+  <br><br>
+
+  <div style="text-align: center;">
+    <button type="button" id="buttonid" class="btn btn-primary">Lord More</button>
+  </div>
+
+  <br><br>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+         <!-- Facebook -->
+         <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"><i class="fa fa-facebook"
+          aria-hidden="true"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den-in" role="button"><i class="fa fa-twitter"
+          aria-hidden="true"></i></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.co.in/maps" role="button"><i class="fa fa-map-marker"
+          aria-hidden="true"></i></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.co.in/maps" role="button"><i class="fa fa-map-marker"
+          aria-hidden="true"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://in.linkedin.com/" role="button"><i class="fa fa-linkedin"
+          aria-hidden="true"></i></a>
+
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up </strong>
+              </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+      </section>
+      <!-- Section: Text -->
+
+
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        Food Delivery © 2023
+        <a class="text-white" href="#">Privacy Policy</a>
+      </div>
+      <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+
+  <script>
+
+    const searchengine = () => {
+      let filter = document.getElementById('myinput').value.toUpperCase();
+
+      let card = document.getElementsByClassName('col-sm-6');
+      let mediacards = document.getElementsByClassName('inputsearch');
+      let x = document.getElementsByClassName('card');
+
+
+
+      for (var i = 0; i < card.length; i++) {
+        let a = card[i].getElementsByTagName('p')[0];
+        let textValue = a.textContent || a.innerText;
+        if (textValue.toUpperCase().indexOf(filter) > -1) {
+          card[i].style.display = '';
+
+          // li[i].style.display = "block";
+
+        }
+
+        else {
+          card[i].style.display = 'none';
+        }
+
+      }
+
+
+      // MEDIA QUERY SERACH SYSTEM->>>
+
+      for (var i = 0; i <  mediacards.length; i++) {
+        let a = mediacards[i].getElementsByTagName('p')[0];
+        let textValue = a.textContent || a.innerText;
+        if (textValue.toUpperCase().indexOf(filter) > -1) {
+          mediacards[i].style.display = '';
+
+          // li[i].style.display = "block";
+
+        }
+
+        else {
+          mediacards[i].style.display = 'none';
+        }
+
+      } 
+
+
+
+
+
+
+    }
+
+    
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+{% endblock content %}
